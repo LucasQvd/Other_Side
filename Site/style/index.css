@@ -1,0 +1,26 @@
+.landpage { 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.inicio {
+  height: 820px;
+  height: 900px;
+  color: white;
+  background-image: url(../assets/banner_escuro.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.cta {
+  color: whitesmoke;
+  font-size: larger;
+}
+
+.sangue {
+  color: var(--vermelho_vibrante);
+}

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Cinzel+Decorative&family=Patrick+Hand&family=Orbitron&display=swap');
+
+:root {
+  --preto_abissal: #0e0e0e;
+  --preto_abissal_opaco: rgba(14, 14, 14, 0.96);
+  --vermelho_sangue: #8b0000;
+  --vermelho_vivo: #b22222;
+  --vermelho_vibrante: #fa2525;
+  --dourado_antigo: #c2a83e;
+  --dourado_antigo_opaco: rgba(194, 168, 62, 0.4);
+  --cinza_espectral: #dcdcdc;
+  --azul_profundo: #1a1a40;
+  --roxo_ritual: #4b0082;
+  --azul_espectral: #4169e1;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+} 
+
+h1, h2 {
+  font-family: 'Cinzel Decorative', serif;
+  text-shadow: 1px 1px 2px #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
