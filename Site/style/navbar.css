@@ -1,11 +1,11 @@
 .navbar {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--preto_abissal_opaco);
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    height: 80px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--preto_abissal_opaco);
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 80px;
+  justify-content: space-between;
 }
 
 .logo {
@@ -43,7 +43,9 @@ li {
   text-decoration-color: var(--vermelho_sangue);
 }
 
-button {
+.btn_entrar {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: large;
   border: none;
   border-radius: 5px;
   background: linear-gradient(
@@ -51,7 +53,6 @@ button {
     var(--vermelho_sangue),
     var(--vermelho_vivo)
   );
-  font-weight: 600;
   color: whitesmoke;
   cursor: pointer;
   width: 15%;

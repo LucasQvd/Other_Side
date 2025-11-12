@@ -29,7 +29,7 @@
 
             </ul>
 
-            <button>Entrar</button>
+            <button class="btn_entrar">Entrar</button>
 
         </nav>
 
@@ -40,15 +40,27 @@
         <section id="inicio" class="inicio">
 
             <div class="cta">
-                <h2>O <span class="sangue">Paranormal</span> não vem para nossa <span class="sangue">Realidade</span> maneira fácil... </h2>
-                <h2>Ou, pelo menos, as coisas <span class="sangue">deveriam ser assim...</span></h2>
+                <h2 style="color: white;">
+                    O <span class="sangue">Paranormal</span> não vem para nossa <span class="sangue">Realidade</span> de maneira fácil... 
+                </h2>
+                <h2 style="color: white;">
+                    Ou, pelo menos, as coisas <span class="sangue">deveriam ser assim...</span>
+                </h2>
             </div>
 
         </section>
 
         <section id="rpg" class="rpg">
 
-            <div></div>
+            <div class="container_rpg">
+
+                <button onclick="voltar()" class="btn_rpg"><img src="../assets/seta_voltar.png" class="logo"></button>
+
+                <div id="card_rpg" class="card_rpg"></div>
+
+                <button onclick="avancar()" class="btn_rpg"><img src="../assets/seta_avancar.png" class="logo"></button>
+
+            </div>
 
         </section>
 
@@ -59,6 +71,9 @@
         <p>© 2025 - Inspirado em Ordem Paranormal</p>
 
     </footer>
+
+    <script src="../js/index.js"></script>
+
 </body>
 
 </html>

@@ -1,11 +1,10 @@
-.landpage { 
-  display: flex; 
-  flex-direction: column; 
+.landpage {
+  display: flex;
+  flex-direction: column;
 }
 
 .inicio {
-  height: 820px;
-  height: 900px;
+  height: 720px;
   color: white;
   background-image: url(../assets/banner_escuro.png);
   background-size: cover;
@@ -23,4 +22,79 @@
 
 .sangue {
   color: var(--vermelho_vibrante);
+}
+
+.rpg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 800px;
+  color: white;
+  background-image: url(../assets/rpg_banner.png);
+  background-size: cover;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+.container_rpg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  gap: 50px; 
+  flex-grow: 1; 
+}
+
+.card_rpg {
+  width: 1050px;
+  height: 600px;
+  background: var(--preto_abissal_opaco);
+  border-radius: 16px;
+  box-shadow: 0 0 20px #000;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.img_rpg {
+  height: 100%;
+  width: auto; 
+  object-fit: cover; 
+  border-radius: 0 16px 16px 0; 
+}
+
+.texto_rpg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  text-align: left;
+  gap: 1.2rem;
+}
+
+.texto_rpg h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.texto_rpg p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: rgb(220, 220, 220);
+  text-align: justify;
+}
+
+.btn_rpg {
+  border: none;
+  background-color: rgb(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.btn_rpg:hover {
+  transform: scale(1.10);
 }
