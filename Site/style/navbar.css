@@ -43,9 +43,10 @@ li {
   text-decoration-color: var(--vermelho_sangue);
 }
 
-.btn_entrar {
+.btn_entrar  {
   font-family: "Cormorant Garamond", sans-serif;
   font-size: large;
+  font-weight: 900;
   border: none;
   border-radius: 5px;
   background: linear-gradient(

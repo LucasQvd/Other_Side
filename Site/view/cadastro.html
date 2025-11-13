@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Junte-se a Luta</title>
+    <link rel="shortcut icon" href="../assets/medo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/global.css" />
+    <link rel="stylesheet" href="../style/navbar.css" />
+    <link rel="stylesheet" href="../style/cadastro.css" />
+    <link rel="stylesheet" href="../style/footer.css" />
+</head>
+
+<body>
+    <header class="navbar">
+
+        <a href="./index.html"><img src="../assets/other_side.png" class="logo" alt="Other Side" /></a>
+
+        <nav class="lista_secoes">
+
+            <ul class="lista">
+
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#rpg">RPG</a></li>
+                <li><a href="#serie">Série</a></li>
+                <li><a href="#sistema">Sistema</a></li>
+                <li><a href="#importancia">Importância</a></li>
+                <li><a href="#onu">ONU</a></li>
+
+            </ul>
+
+            <button onclick="window.location.href='login.html'" class="btn_entrar">Entrar</button>
+
+        </nav>
+
+    </header>
+
+    <main class="cadastro">
+
+        <section class="card_cadastro">
+
+            <h2>Junte-se a luta!</h2>
+
+            <form class="formulario" onsubmit="cadastrar()">
+
+                <div class="campo">
+
+                    <label for="ipt_nome">Nome:</label><br>
+                    <input id="ipt_nome" type="text" placeholder="Nome">
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="ipt_email">E-mail:</label><br>
+                    <input id="ipt_email" type="email" placeholder="seu@email.com">
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="ipt_senha">Senha:</label><br>
+                    <input id="ipt_senha" type="text" placeholder="******">
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="ipt_confirmar_senha">Confirme sua Senha:</label><br>
+                    <input id="ipt_confirmar_senha" type="text" placeholder="******">
+
+                </div>
+
+                <button class="btn_cadastro" type="submit">Cadastrar</button>
+                <span>Já cadastrou-se? <a href="login.html">Faça seu login agora!</a></span>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2025 - Inspirado em Ordem Paranormal</p>
+
+    </footer>
+
+</body>
+
+</html>
