@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Volte para Batalha</title>
+        <link rel="shortcut icon" href="../assets/medo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="../style/global.css" />
+        <link rel="stylesheet" href="../style/navbar.css" />
+        <link rel="stylesheet" href="../style/login.css" />
+        <link rel="stylesheet" href="../style/footer.css" />
+    </head>
+
+    <body>
+        
+        <header class="navbar">
+
+            <a href="../index.html"><img src="../assets/other_side.png" class="logo_horizontal" alt="Other Side" /></a>
+
+            <nav class="lista_secoes">
+
+                <ul class="lista">
+
+                    <li><a href="../index.html#inicio">Início</a></li>
+                    <li><a href="../index.html#rpg">RPG</a></li>
+                    <li><a href="../index.html#serie">Série</a></li>
+                    <li><a href="../index.html#sistema">Sistema</a></li>
+                    <li><a href="../index.html#importancia">Importância</a></li>
+                    <li><a href="../index.html#onu">ONU</a></li>
+
+                </ul>
+
+                <button onclick="window.location.href='login.html'" class="btn_entrar">Entrar</button>
+
+            </nav>
+
+        </header>
+
+        <main class="login">
+
+            <section class="card_login">
+
+                <h2>Volte para batalha!</h2>
+
+                <div class="formulario">
+
+                    <div>
+
+                        <label for="ipt_email">E-mail:</label><br>
+                        <input id="ipt_email" type="email" placeholder="Login">
+
+                    </div>
+
+                    <div>
+
+                        <label for="ipt_senha">Senha:</label><br>
+                        <div class="visualizar_senha">
+
+                            <input id="ipt_senha" type="password" placeholder="******">
+                            <i id="icone_olho1" class="fa-solid fa-eye" onclick="verSenha()"></i>
+                            
+                        </div>
+                        
+
+                    </div>
+
+                    <button class="btn_login" onclick="entrar()">Entrar</button>
+                    <span>Não possui login? <a href="cadastro.html">Cadastre-se agora!</a></span>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+            <p>© 2025 - Inspirado em Ordem Paranormal</p>
+
+        </footer>
+
+        <script src="../js/login.js"></script>
+
+    </body>
+
+    </html>

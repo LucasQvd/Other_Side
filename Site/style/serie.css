@@ -1,0 +1,69 @@
+/* Organização das Seções da Landing Page */
+.landpage {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Transição suave ao clicar na navbar */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Formatação geral das seções */
+section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Aplica o efeito fixo apenas nas seções desejadas */
+.inicio,
+.rpg {
+  background-attachment: fixed;
+}
+
+/* Degradê suave no topo e base */
+section::before,
+section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Escurece suavemente o topo da seção (mistura com a anterior) */
+section::before {
+  top: 0;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8));
+}
+
+/* Escurece suavemente a base (mistura com a próxima) */
+section::after {
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+}
+
+/* SEÇÃO 1 - ÍNICIO */
+.inicio {
+  height: 900px;
+  color: white;
+  background-image: url(../assets/serie.jpeg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.cta {
+  color: whitesmoke;
+  font-size: larger;
+}
+
+.sangue {
+  color: var(--vermelho_vibrante);
+}

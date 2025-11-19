@@ -1,0 +1,141 @@
+/* CONFIGURAÇÕES GERAIS */
+
+/* Importação de fontes externas */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Cinzel+Decorative&family=Patrick+Hand&family=Orbitron&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+@font-face {
+  font-family: "Sigilos";
+  src: url("../assets/Sigilos-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Sinais Estrangeiro";
+  src: url("../assets/SinaisEstrangeiro-Regular.ttf");
+}
+
+/* Declaração das variáveis de cor para manter a paleta unificada */
+:root {
+  --preto_abissal: #0e0e0e;
+  --preto_abissal_opaco: rgba(14, 14, 14, 0.96);
+  --vermelho_sangue: #8b0000;
+  --vermelho_vivo: #b22222;
+  --vermelho_vibrante: #fa2525;
+  --dourado_antigo: #c2a83e;
+  --dourado_antigo_opaco: rgba(127, 116, 69, 0.799);
+  --cinza_espectral: #dcdcdc;
+  --azul_profundo: #1a1a40;
+  --roxo_ritual: #1e052f;
+  --roxo_oculto: #b340ff;
+  --azul_espectral: #4169e1;
+}
+
+/* Reset geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globais do body */
+body {
+  font-family: "Cormorant Garamond", sans-serif; /* Define fonte padrão */
+  background: var(--preto_abissal); /* Fundo escuro do site */
+  color: white; /* Texto branco */
+}
+
+/* Títulos principais (h1, h2, h3) */
+h1,
+h2,
+h3 {
+  font-family: "Cinzel Decorative", serif; /* Fonte do Texto */
+  color: var(--dourado_antigo); /* Texto Dourado */
+  text-shadow: 1px 1px 2px #000; /* Sombra para destaque */
+}
+
+/* Estilo exclusivo para h3 */
+h3 {
+  color: var(--vermelho_sangue); /* Texto Vermelho */
+  text-decoration: underline; /* Sublinhado */
+}
+
+/* Links padrão */
+a {
+  text-decoration: none; /* Remove sublinhado */
+  color: inherit; /* Herda cor do contêiner */
+}
+
+/* Remoção do estilo padrão das listas */
+li {
+  list-style: none;
+}
+
+/* Estilo padrão para textos */
+p {
+  font-size: 1.2rem; /* Tamanho do Texto */
+  color: rgb(220, 220, 220); /* Texto Cinza claro */
+}
+
+button {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: large;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--vermelho_sangue),
+    var(--vermelho_vivo)
+  );
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px var(--dourado_antigo_opaco);
+}
+
+/* UTILITÁRIOS */
+
+.sangue {
+  color: var(--vermelho_vibrante);
+}
+
+.oculto {
+  color: var(--roxo_oculto);
+}
+
+.conteudo {
+  flex: 1;
+  padding: 30px;
+  background: var(--preto_abissal);
+  overflow-y: auto;
+}
+
+.visualizar_senha {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#icone_olho1,
+#icone_olho2 {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--vermelho_sangue);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#icone_olho1:hover,
+#icone_olho2:hover {
+  color: var(--dourado_antigo);
+  transform: translateY(-50%) scale(1.1);
+}
