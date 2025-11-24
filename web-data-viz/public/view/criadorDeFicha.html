@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Crie sua Ficha</title>
+  <link rel="shortcut icon" href="../assets/medo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../style/global.css" />
+  <link rel="stylesheet" href="../style/criadorDeFicha.css" />
+</head>
+
+<body>
+  <main class="criador_de_ficha">
+    <h1>Crie sua Ficha</h1>
+
+    <section id="atributos" class="atributos">
+
+      <div class="titulo_card">
+
+        <h2>Atributos</h2>
+
+      </div>
+
+      <div class="conteudo_card">
+
+        <div class="pentagrama">
+
+          <img src="../assets/atributos.png" />
+
+          <input onclick="mudarDescricao(1)" onchange="validarCampo(1)" type="number" id="ipt_forca" value="1" />
+          <input onclick="mudarDescricao(2)" onchange="validarCampo(2)" type="number" id="ipt_agilidade" value="1" />
+          <input onclick="mudarDescricao(3)" onchange="validarCampo(3)" type="number" id="ipt_vigor" value="1" />
+          <input onclick="mudarDescricao(4)" onchange="validarCampo(4)" type="number" id="ipt_presenca" value="1" />
+          <input onclick="mudarDescricao(5)" onchange="validarCampo(5)" type="number" id="ipt_intelecto" value="1" />
+
+        </div>
+
+        <div class="info_atributo">
+
+          <h3 id="tituloAtributo">
+            Selecione seus atributos
+          </h3>
+
+          <p id="descricaoAtributo">
+            Você possui 4 pontos iniciais para distribuir dentre os 5 atributos do sistema.<br><br>
+            Clique em um dos atributos do pentagrama para ver sua descrição.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="botoes_card">
+
+        <button class="btn_sair" onclick="window.location = './biblioteca.html'">Sair</button>
+        <button onclick="trocarCard(1)">Avançar</button>
+
+      </div>
+
+    </section>
+
+    <section id="classes" class="classes">
+
+      <div class="titulo_card">
+
+        <h2>Classes</h2>
+
+      </div>
+
+      <div class="conteudo_card">
+
+        <a class="card_classes" id="combatente">
+
+          <h3 style="color: var(--forca);">Combatente</h3>
+          <br>
+          <p>
+            Treinado para lutar com todo tipo de armas, e com a força e a coragem para encarar os perigos de frente. É o tipo de agente que prefere abordagens mais diretas e costuma atirar primeiro e perguntar depois.
+          </p>
+
+        </a>
+
+        <a class="card_classes" id="especialista">
+
+          <h3 style="color: var(--intelecto);">Especialista</h3>
+          <br>
+          <p>
+            Um agente que confia mais em esperteza do que em força bruta. Um especialista se vale de conhecimento técnico, raciocínio rápido ou mesmo lábia para resolver mistérios e enfrentar o paranormal.
+          </p>
+
+        </a>
+
+        <a class="card_classes" id="ocultista">
+
+          <h3 style="color: var(--roxo_escuro);">Ocultista</h3>
+          <br>
+          <p>
+            Muitos estudiosos das entidades se perdem em seus reinos obscuros em busca de poder, mas existem aqueles que visam compreender e dominar os mistérios paranormais para usá-los para combater o próprio Outro Lado.
+          </p>
+
+        </a>
+
+      </div>
+
+      <div class="botoes_card">
+
+        <button onclick="trocarCard(2)">Voltar</button>
+
+        <div class="selecionar">
+
+          <label for="classeSelect">Selecione sua classe:</label>
+          <select id="classeSelect">
+            <option value="combatente">Combatente</option>
+            <option value="especialista">Especialista</option>
+            <option value="ocultista">Ocultista</option>
+            <option selected disabled value="#">Selecione uma classe</option>
+          </select>
+
+        </div>
+
+        <button onclick="trocarCard(3)">Avançar</button>
+
+      </div>
+
+    </section>
+
+    <section id="informacoes" class="informacoes">
+      <div class="titulo_card">
+        <h2>Informações Pessoais:</h2>
+      </div>
+
+      <div>
+        <div>Nome:</div>
+        <input type="text" id="ipt_nome" />
+        <br />
+        <div>História:</div>
+        <input type="text" id="ipt_historia" />
+        <div>Aparência:</div>
+        <input type="text" id="ipt_aparencia" />
+        <div>Personalidade:</div>
+        <input type="text" id="ipt_personalidade" />
+      </div>
+
+      <div>
+        <button onclick="trocarCard(4)">Voltar</button>
+        <button onclick="criarFicha()">Finalizar</button>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
+
+<script src="../js/criadorDeFicha.js"></script>

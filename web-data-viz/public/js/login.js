@@ -11,7 +11,6 @@ function verSenha() {
 }
 
 function entrar() {
-
   // Armazena o valor das inputs em variáveis
   var emailVar = ipt_email.value;
   var senhaVar = ipt_senha.value;
@@ -49,7 +48,7 @@ function entrar() {
           sessionStorage.EMAIL_USUARIO = json.email;
 
           
-          window.location = "./fichas.html";
+          window.location = "./biblioteca.html";
         });
       } else {
         console.log("Houve um erro ao tentar realizar o login!");

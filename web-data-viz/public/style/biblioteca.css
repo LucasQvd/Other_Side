@@ -1,0 +1,11 @@
+.cabecalho {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_criar {
+  background: linear-gradient(90deg, var(--roxo_escuro), var(--roxo_claro));
+  color: whitesmoke;
+  width: 10%;
+  height: 40px;
+}

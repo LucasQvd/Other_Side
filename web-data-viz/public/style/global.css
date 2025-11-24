@@ -27,8 +27,15 @@
   --cinza_espectral: #dcdcdc;
   --azul_profundo: #1a1a40;
   --roxo_ritual: #1e052f;
-  --roxo_oculto: #b340ff;
+  --roxo_escuro: #7b2cbf;
+  --roxo_claro: #9d4edd;
+  --violeta: #c884ff;
   --azul_espectral: #4169e1;
+  --forca: #b22222;
+  --vigor: #ff8400;
+  --agilidade: #00bfa5;
+  --intelecto: #0e5ee9;
+  --presenca: #d4af37; 
 }
 
 /* Reset geral */
@@ -83,12 +90,6 @@ button {
   font-weight: 900;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(
-    90deg,
-    var(--vermelho_sangue),
-    var(--vermelho_vivo)
-  );
-  color: whitesmoke;
   cursor: pointer;
   transition: 0.15s ease;
 }
@@ -104,12 +105,9 @@ button:hover {
   color: var(--vermelho_vibrante);
 }
 
-.oculto {
-  color: var(--roxo_oculto);
-}
-
 .conteudo {
   flex: 1;
+  flex-direction: column;
   padding: 30px;
   background: var(--preto_abissal);
   overflow-y: auto;

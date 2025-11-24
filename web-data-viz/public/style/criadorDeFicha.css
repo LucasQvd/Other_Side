@@ -1,0 +1,189 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Formatação da Página */
+.criador_de_ficha {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilização Padrão dos Cards */
+.atributos,
+.classes,
+.informacoes {
+  background-color: #222;
+  height: 550px;
+  width: 60%;
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Título Padrão dos Cards */
+.titulo_card {
+  text-align: center;
+}
+
+.titulo_card h2 {
+  color: var(--violeta);
+}
+
+/* Conteúdo Padrão dos Cards */
+.conteudo_card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botão Padrão dos Cards */
+.botoes_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.botoes_card button {
+  width: 120px;
+  height: 35px;
+  background: linear-gradient(90deg, var(--roxo_escuro), var(--roxo_claro));
+  color: whitesmoke;
+}
+
+.botoes_card .btn_sair {
+  background: linear-gradient(
+    90deg,
+    var(--vermelho_sangue),
+    var(--vermelho_vivo)
+  );
+}
+
+/* CARD ATRIBUTOS */
+.atributos {
+  display: flex;
+  flex-direction: column;
+}
+
+.atributos .conteudo_card {
+  gap: 80px;
+}
+
+.pentagrama {
+  position: relative;
+  width: 340px;
+  height: 340px;
+}
+
+.pentagrama img {
+  width: 100%;
+  height: 100%;
+}
+
+.pentagrama input {
+  position: absolute;
+  width: 45px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-align: center;
+  font-size: 30px;
+  background: none;
+  color: white;
+}
+
+#ipt_forca {
+  top: 110px;
+  left: 43px;
+}
+
+#ipt_agilidade {
+  top: 35px;
+  right: 147px;
+}
+
+#ipt_vigor {
+  bottom: 58px;
+  left: 216px;
+}
+
+#ipt_presenca {
+  bottom: 58px;
+  left: 76px;
+}
+
+#ipt_intelecto {
+  left: 255px;
+  top: 110px;
+}
+
+.info_atributo {
+  text-align: center;
+  width: 35%;
+}
+
+.info_atributo h3 {
+  color: var(--azul_espectral);
+  margin-bottom: 10px;
+}
+
+/* CARD CLASSE */
+
+.classes {
+  display: none;
+  flex-direction: column;
+}
+
+.classes .conteudo_card {
+  gap: 40px;
+}
+
+.classes .card_classes {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 20px;
+  width: 28%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow-y: auto;
+  cursor: pointer;
+}
+
+.botoes_classes .selecionar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botoes_classes select {
+  width: 180px;
+  height: 35px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background: #111;
+  color: white;
+  border: 1px solid #444;
+  padding-left: 8px;
+}
+
+/* CARD INFORMAÇÕES */
+.informacoes {
+  display: none;
+  flex-direction: column;
+}
+
+/* Botões gerais das outras telas */
+.classes button,
+.informacoes button {
+  width: 100px;
+  height: 30px;
+}

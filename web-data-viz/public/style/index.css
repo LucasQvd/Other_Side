@@ -116,6 +116,12 @@ Responsável por escurecer o fundo e aplicar blur (desfoque) */
 
 /* Padronização do Botão usado nos Cards */
 .card button {
+  background: linear-gradient(
+    90deg,
+    var(--vermelho_sangue),
+    var(--vermelho_vivo)
+  );
+  color: whitesmoke;
   padding: 0.8rem 2rem; /* Espaçamento interno */
 }
 
