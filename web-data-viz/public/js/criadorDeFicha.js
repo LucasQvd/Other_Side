@@ -1,33 +1,48 @@
+var nomePersonagem = "";
+var nomeJogador = "";
+var nex = 0;
+var forca = 0;
+var agilidade = 0;
+var vigor = 0;
+var presenca = 0;
+var intelecto = 0;
 var classe = "";
 
 function trocarCard(num) {
   if (num == 1) {
-    informacoes.style.display = "none";
-    atributos.style.display = "flex";
+    nomePersonagem = ipt_nome_personagem.value;
+    nomeJogador = ipt_nome_jogador.value;
+    nex = Number(ipt_nex.value);
+    if (!nomePersonagem || !nomeJogador || isNaN(nex)) {
+      if (!nomePersonagem) {
+        alert("Insira o nome do personagem antes de prosseguir!");
+      } else if (!nomeJogador) {
+        alert("Insira o nome do jogador antes de prosseguir!");
+      } else if (isNaN(nex)) {
+        alert("Insira o nível do personagem antes de prosseguir!");
+      }
+    } else {
+      informacoes.style.display = "none";
+      atributos.style.display = "flex";
+    }
   } else if (num == 2) {
     atributos.style.display = "none";
     informacoes.style.display = "flex";
   } else if (num == 3) {
-    atributos.style.display = "none";
-    classes.style.display = "flex";
-    var forca = Number(ipt_forca.value);
-    var agilidade = Number(ipt_agilidade.value);
-    var vigor = Number(ipt_vigor.value);
-    var presenca = Number(ipt_presenca.value);
-    var intelecto = Number(ipt_intelecto.value);
+    forca = Number(ipt_forca.value);
+    agilidade = Number(ipt_agilidade.value);
+    vigor = Number(ipt_vigor.value);
+    presenca = Number(ipt_presenca.value);
+    intelecto = Number(ipt_intelecto.value);
     var soma = forca + agilidade + vigor + presenca + intelecto;
-    // if (soma == 9) {
-    //   atributos.style.display = "none";
-    //   classes.style.display = "flex";
-    // } else if (soma < 9) {
-    //   alert(
-    //     "Você possui 4 pontos de atributo para distribuir antes de prosseguir, a soma de todos deve ser igual a 9!"
-    //   );
-    // } else {
-    //   alert(
-    //     "Você distribuiu mais de 4 pontos entre seus atributos, a soma de todos deve ser igual a 9!"
-    //   );
-    // }
+    if (soma == 9) {
+      atributos.style.display = "none";
+      classes.style.display = "flex";
+    } else if (soma < 9) {
+      alert("Você possui 4 pontos de atributo para distribuir antes de prosseguir, a soma de todos deve ser igual a 9!");
+    } else {
+      alert("Você distribuiu mais de 4 pontos entre seus atributos, a soma de todos deve ser igual a 9!");
+    }
   } else if (num == 4) {
     classes.style.display = "none";
     atributos.style.display = "flex";
@@ -119,43 +134,20 @@ function validarCampo(atributo) {
   }
 }
 
-// function selecionarClasse(num) {
-//     combatente.style.transform = "none";
-//     especialista.style.transform = "none";
-//     ocultista.style.transform = "none";
-//     if (num == 1) {
-//         classe = "Combatente";
-//         combatente.style.transform = "scale(1.02)";
-//     }
-//     else if (num == 2) {
-//         classe = "Especialista";
-//         especialista.style.transform = "scale(1.02)";
-//     }
-//     else if (num == 3) {
-//         classe = "Ocultista";
-//         ocultista.style.transform = "scale(1.02)";
-//     }
-// }
-
-var classeSelecionada = "";
-
 function selecionarClasse(id) {
   combatente.classList.remove("selecionado");
   especialista.classList.remove("selecionado");
   ocultista.classList.remove("selecionado");
 
   if (id == 1) {
-    classeSelecionada = "Combatente"
+    classe = "Combatente";
     combatente.classList.add("selecionado");
-  }
-  else if (id == 2) {
-    classeSelecionada = "Especialista"
+  } else if (id == 2) {
+    classe = "Especialista";
     especialista.classList.add("selecionado");
-  }
-  else if (id == 3) {
-    classeSelecionada = "Ocultista"
+  } else if (id == 3) {
+    classe = "Ocultista";
     ocultista.classList.add("selecionado");
   }
-
-  console.log("Classe escolhida:", classeSelecionada);
 }
+
