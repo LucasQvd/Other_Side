@@ -151,52 +151,52 @@ function selecionarClasse(id) {
   }
 }
 
-// function cadastrar() {
-//   var nomePersonagemVar = nomePersonagem;
-//   var nomeJogadorVar = nomeJogador;
-//   var nexVar = nex;
-//   var forcaVar = forca;
-//   var agilidadeVar = agilidade;
-//   var vigorVar = vigor;
-//   var presencaVar = presenca;
-//   var intelectoVar = intelecto;
-//   var classeVar = classe;
+function criarFicha() {
+  var nomePersonagemVar = nomePersonagem;
+  var nomeJogadorVar = nomeJogador;
+  var nexVar = nex;
+  var forcaVar = forca;
+  var agilidadeVar = agilidade;
+  var vigorVar = vigor;
+  var presencaVar = presenca;
+  var intelectoVar = intelecto;
+  var classeVar = classe;
 
-//   if (classeVar == "") {
-//     alert("Selecione uma das 3 classes antes de prosseguir!");
-//     return
-//   }
+  if (classeVar == "") {
+    alert("Selecione uma das 3 classes antes de prosseguir!");
+    return
+  }
 
-//   // Enviando o valor da nova input
-//   fetch("/usuarios/cadastrar", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       // crie um atributo que recebe o valor recuperado aqui
-//       // Agora vá para o arquivo routes/usuario.js
-//       nomeServer: nomeVar,
-//       emailServer: emailVar,
-//       senhaServer: senhaVar,
-//     }),
-//   })
-//     .then(function (resposta) {
-//       console.log("resposta: ", resposta);
+  // Enviando o valor da nova input
+  fetch("/usuarios/cadastrar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      nomeServer: nomeVar,
+      emailServer: emailVar,
+      senhaServer: senhaVar,
+    }),
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
 
-//       if (resposta.ok) {
-//         alert(
-//           "Cadastro realizado com sucesso! Redirecionando para tela de Login..."
-//         );
+      if (resposta.ok) {
+        alert(
+          "Cadastro realizado com sucesso! Redirecionando para tela de Login..."
+        );
 
-//         window.location = "login.html";
-//       } else {
-//         throw "Houve um erro ao tentar realizar o cadastro!";
-//       }
-//     })
-//     .catch(function (resposta) {
-//       console.log(`#ERRO: ${resposta}`);
-//     });
+        window.location = "login.html";
+      } else {
+        throw "Houve um erro ao tentar realizar o cadastro!";
+      }
+    })
+    .catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+    });
 
-//   return false;
-// }
+  return false;
+}
