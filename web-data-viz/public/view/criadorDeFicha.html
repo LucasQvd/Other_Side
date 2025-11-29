@@ -143,7 +143,7 @@
 
       <div class="conteudo_card">
 
-        <a class="card_classes" id="combatente">
+        <a onclick="selecionarClasse(1)" class="card_classes" id="combatente">
 
           <h3 style="color: var(--forca);">Combatente</h3>
           <br>
@@ -154,7 +154,7 @@
 
         </a>
 
-        <a class="card_classes" id="especialista">
+        <a onclick="selecionarClasse(2)" class="card_classes" id="especialista">
 
           <h3 style="color: var(--intelecto);">Especialista</h3>
           <br>
@@ -165,7 +165,7 @@
 
         </a>
 
-        <a class="card_classes" id="ocultista">
+        <a onclick="selecionarClasse(3)" class="card_classes" id="ocultista">
 
           <h3 style="color: var(--roxo_escuro);">Ocultista</h3>
           <br>
@@ -181,21 +181,7 @@
       <div class="botoes_card">
 
         <button onclick="trocarCard(4)">Voltar</button>
-
-
-        <div class="selecionar">
-
-          <label for="classeSelect">Selecione sua classe:</label>
-          <select id="classeSelect">
-            <option value="combatente">Combatente</option>
-            <option value="especialista">Especialista</option>
-            <option value="ocultista">Ocultista</option>
-            <option selected disabled value="#">Selecione uma classe</option>
-          </select>
-
-        </div>
-
-        <button onclick="trocarCard(3)">Avançar</button>
+        <button onclick="criarFicha()" class="btn_sair">Avançar</button>
 
       </div>
 

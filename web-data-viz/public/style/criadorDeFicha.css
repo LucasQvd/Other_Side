@@ -82,7 +82,6 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100%;
 }
 
-
 .informacoes .conteudo_card {
   display: flex;
   flex-direction: column;
@@ -143,10 +142,9 @@ input[type="number"]::-webkit-inner-spin-button {
   color: white;
   resize: vertical;
   overflow-y: auto;
-  white-space: normal;      /* permite quebra */
-  word-break: break-word;   /* força quebra se necessário */
+  white-space: normal; /* permite quebra */
+  word-break: break-word; /* força quebra se necessário */
 }
-
 
 .informacoes .conteudo_card input:focus,
 .informacoes .conteudo_card select:focus,
@@ -240,27 +238,21 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 10px;
   padding: 20px;
   width: 28%;
-  height: 80%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  overflow-y: auto;
   cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  border: 2px solid transparent;
 }
 
-.botoes_classes .selecionar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card_classes:hover {
+  transform: scale(1.05);
 }
 
-.botoes_classes select {
-  width: 180px;
-  height: 35px;
-  margin-top: 5px;
-  border-radius: 5px;
-  background: #111;
-  color: white;
-  border: 1px solid #444;
-  padding-left: 8px;
+.card_classes.selecionado {
+  transform: scale(1.05);
+  border: 2px solid var(--violeta);
+  box-shadow: 0 0 20px var(--violeta);
 }
