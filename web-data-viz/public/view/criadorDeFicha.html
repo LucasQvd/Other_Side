@@ -13,6 +13,80 @@
   <main class="criador_de_ficha">
     <h1>Crie sua Ficha</h1>
 
+    <section id="informacoes" class="informacoes">
+
+      <div class="titulo_card">
+
+        <h2>Informações Pessoais:</h2>
+
+      </div>
+
+      <div class="conteudo_card">
+
+        <div class="essenciais">
+
+          <label for="ipt_nomePersonagem">Nome do Personagem:
+            <input type="text" id="ipt_nomePersonagem" />
+          </label>
+
+          <label for="ipt_nomeJogador">Nome do Jogador:
+            <input type="text" id="ipt_nomeJogador" />
+          </label>
+
+          <label for="ipt_nex">Nível do Personagem:
+            <select id="ipt_nex">
+              <option selected disabled value="#">Selecione seu NEX</option>
+              <option value="1">5%</option>
+              <option value="2">10%</option>
+              <option value="3">15%</option>
+              <option value="4">20%</option>
+              <option value="5">25%</option>
+              <option value="6">30%</option>
+              <option value="7">35%</option>
+              <option value="8">40%</option>
+              <option value="9">45%</option>
+              <option value="10">50%</option>
+              <option value="11">55%</option>
+              <option value="12">60%</option>
+              <option value="13">65%</option>
+              <option value="14">70%</option>
+              <option value="15">75%</option>
+              <option value="16">80%</option>
+              <option value="17">85%</option>
+              <option value="18">90%</option>
+              <option value="19">95%</option>
+              <option value="20">99%</option>
+            </select>
+          </label>
+
+        </div>
+
+        <br />
+
+        <div class="opcionais">
+
+          <label for="ipt_historia">História:</label>
+          <textarea id="ipt_historia"></textarea>
+
+          <label for="ipt_aparencia">Aparência:</label>
+          <textarea id="ipt_aparencia"></textarea>
+
+          <label for="ipt_personalidade">Personalidade:</label>
+          <textarea id="ipt_personalidade"></textarea>
+
+        </div>
+
+      </div>
+
+      <div class="botoes_card">
+
+        <button class="btn_sair" onclick="window.location = './biblioteca.html'">Sair</button>
+        <button onclick="trocarCard(1)">Avançar</button>
+
+      </div>
+
+    </section>
+
     <section id="atributos" class="atributos">
 
       <div class="titulo_card">
@@ -52,8 +126,8 @@
 
       <div class="botoes_card">
 
-        <button class="btn_sair" onclick="window.location = './biblioteca.html'">Sair</button>
-        <button onclick="trocarCard(1)">Avançar</button>
+        <button onclick="trocarCard(2)">Voltar</button>
+        <button onclick="trocarCard(3)">Avançar</button>
 
       </div>
 
@@ -74,7 +148,8 @@
           <h3 style="color: var(--forca);">Combatente</h3>
           <br>
           <p>
-            Treinado para lutar com todo tipo de armas, e com a força e a coragem para encarar os perigos de frente. É o tipo de agente que prefere abordagens mais diretas e costuma atirar primeiro e perguntar depois.
+            Treinado para lutar com todo tipo de armas, e com a força e a coragem para encarar os perigos de frente. É o
+            tipo de agente que prefere abordagens mais diretas e costuma atirar primeiro e perguntar depois.
           </p>
 
         </a>
@@ -84,7 +159,8 @@
           <h3 style="color: var(--intelecto);">Especialista</h3>
           <br>
           <p>
-            Um agente que confia mais em esperteza do que em força bruta. Um especialista se vale de conhecimento técnico, raciocínio rápido ou mesmo lábia para resolver mistérios e enfrentar o paranormal.
+            Um agente que confia mais em esperteza do que em força bruta. Um especialista se vale de conhecimento
+            técnico, raciocínio rápido ou mesmo lábia para resolver mistérios e enfrentar o paranormal.
           </p>
 
         </a>
@@ -94,7 +170,8 @@
           <h3 style="color: var(--roxo_escuro);">Ocultista</h3>
           <br>
           <p>
-            Muitos estudiosos das entidades se perdem em seus reinos obscuros em busca de poder, mas existem aqueles que visam compreender e dominar os mistérios paranormais para usá-los para combater o próprio Outro Lado.
+            Muitos estudiosos das entidades se perdem em seus reinos obscuros em busca de poder, mas existem aqueles que
+            visam compreender e dominar os mistérios paranormais para usá-los para combater o próprio Outro Lado.
           </p>
 
         </a>
@@ -103,7 +180,8 @@
 
       <div class="botoes_card">
 
-        <button onclick="trocarCard(2)">Voltar</button>
+        <button onclick="trocarCard(4)">Voltar</button>
+
 
         <div class="selecionar">
 
@@ -121,29 +199,6 @@
 
       </div>
 
-    </section>
-
-    <section id="informacoes" class="informacoes">
-      <div class="titulo_card">
-        <h2>Informações Pessoais:</h2>
-      </div>
-
-      <div>
-        <div>Nome:</div>
-        <input type="text" id="ipt_nome" />
-        <br />
-        <div>História:</div>
-        <input type="text" id="ipt_historia" />
-        <div>Aparência:</div>
-        <input type="text" id="ipt_aparencia" />
-        <div>Personalidade:</div>
-        <input type="text" id="ipt_personalidade" />
-      </div>
-
-      <div>
-        <button onclick="trocarCard(4)">Voltar</button>
-        <button onclick="criarFicha()">Finalizar</button>
-      </div>
     </section>
 
   </main>

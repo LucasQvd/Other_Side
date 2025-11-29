@@ -2,6 +2,12 @@ var classe = "";
 
 function trocarCard(num) {
   if (num == 1) {
+    informacoes.style.display = "none";
+    atributos.style.display = "flex";
+  } else if (num == 2) {
+    atributos.style.display = "none";
+    informacoes.style.display = "flex";
+  } else if (num == 3) {
     var forca = Number(ipt_forca.value);
     var agilidade = Number(ipt_agilidade.value);
     var vigor = Number(ipt_vigor.value);
@@ -20,15 +26,9 @@ function trocarCard(num) {
         "Você distribuiu mais de 4 pontos entre seus atributos, a soma de todos deve ser igual a 9!"
       );
     }
-  } else if (num == 2) {
+  } else if (num == 4) {
     classes.style.display = "none";
     atributos.style.display = "flex";
-  } else if (num == 3) {
-    classes.style.display = "none";
-    informacoes.style.display = "flex";
-  } else if (num == 4) {
-    informacoes.style.display = "none";
-    classes.style.display = "flex";
   }
 }
 

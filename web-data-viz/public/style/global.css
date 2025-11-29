@@ -99,6 +99,10 @@ button:hover {
   box-shadow: 0 4px 10px var(--dourado_antigo_opaco);
 }
 
+label {
+  cursor: pointer;
+}
+
 /* UTILITÁRIOS */
 
 .sangue {
