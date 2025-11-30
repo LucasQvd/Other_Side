@@ -17,11 +17,13 @@ CREATE TABLE classe (
 );
 
 CREATE TABLE ficha (
-	idFicha INT NOT NULL,
+	idFicha INT NOT NULL AUTO_INCREMENT,
 	fkUsuario INT NOT NULL,
 	CONSTRAINT fkUsuarioFicha
 		FOREIGN KEY (fkUsuario)
 			REFERENCES usuario(idUsuario),
+	CONSTRAINT pkComposta
+		PRIMARY KEY (idFicha, fkUsuario),
 	forca INT NOT NULL,
 	agilidade INT NOT NULL,
 	vigor INT NOT NULL,
@@ -31,12 +33,12 @@ CREATE TABLE ficha (
 	vida INT NOT NULL,
 	sanidade INT NOT NULL,
 	esforco INT NOT NULL,
-	fkClasse INT NOT NULL,
 	nomePersonagem VARCHAR(100) NOT NULL,
 	nomeJogador VARCHAR(100) NOT NULL,
 	historia TEXT,
 	aparencia TEXT,
 	personalidade TEXT,
+    fkClasse INT NOT NULL,
 	CONSTRAINT fkClasseFicha
 		FOREIGN KEY (fkClasse)
 			REFERENCES classe(idClasse)

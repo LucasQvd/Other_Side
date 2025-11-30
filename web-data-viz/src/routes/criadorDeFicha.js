@@ -1,15 +1,11 @@
-// var express = require("express");
-// var router = express.Router();
+var express = require("express");
+var router = express.Router();
 
-// var criadorDeFichaController = require("../controllers/criadorDeFichaController");
+var criadorDeFichaController = require("../controllers/criadorDeFichaController");
 
-// //Recebendo os dados do html e direcionando para a função cadastrar de criadorDeFichaController.js
-// router.post("/cadastrar", function (req, res) {
-//     usuarioController.cadastrar(req, res);
-// })
+//Recebendo os dados do html e direcionando para a função criarFicha de criadorDeFichaController.js
+router.post("/criarFicha", function (req, res) {
+    criadorDeFichaController.criarFicha(req, res);
+})
 
-// router.post("/autenticar", function (req, res) {
-//     usuarioController.autenticar(req, res);
-// });
-
-// module.exports = router;
+module.exports = router;

@@ -6,7 +6,7 @@ var agilidade = 0;
 var vigor = 0;
 var presenca = 0;
 var intelecto = 0;
-var classe = "";
+var classe = 0;
 
 function trocarCard(num) {
   if (num == 1) {
@@ -35,13 +35,76 @@ function trocarCard(num) {
     presenca = Number(ipt_presenca.value);
     intelecto = Number(ipt_intelecto.value);
     var soma = forca + agilidade + vigor + presenca + intelecto;
-    if (soma == 9) {
-      atributos.style.display = "none";
-      classes.style.display = "flex";
-    } else if (soma < 9) {
-      alert("Você possui 4 pontos de atributo para distribuir antes de prosseguir, a soma de todos deve ser igual a 9!");
-    } else {
-      alert("Você distribuiu mais de 4 pontos entre seus atributos, a soma de todos deve ser igual a 9!");
+
+    if (nex < 4) {
+      if (soma == 9) {
+        atributos.style.display = "none";
+        classes.style.display = "flex";
+      } else if (soma < 9) {
+        alert(
+          "Você possui 4 pontos de atributo para distribuir antes de prosseguir, a soma de todos deve ser igual a 9!"
+        );
+      } else {
+        alert(
+          "Você distribuiu mais de 4 pontos entre seus atributos, a soma de todos deve ser igual a 9!"
+        );
+      }
+    }
+    else if (nex < 10) {
+      if (soma == 10) {
+        atributos.style.display = "none";
+        classes.style.display = "flex";
+      } else if (soma < 10) {
+        alert(
+          "Você possui 5 pontos de atributo para distribuir antes de prosseguir, a soma de todos deve ser igual a 10!"
+        );
+      } else {
+        alert(
+          "Você distribuiu mais de 5 pontos entre seus atributos, a soma de todos deve ser igual a 10!"
+        );
+      }
+    }
+    else if (nex < 16) {
+      if (soma == 11) {
+        atributos.style.display = "none";
+        classes.style.display = "flex";
+      } else if (soma < 11) {
+        alert(
+          "Você possui 6 pontos de atributo para distribuir antes de prosseguir, a soma de todos deve ser igual a 11!"
+        );
+      } else {
+        alert(
+          "Você distribuiu mais de 6 pontos entre seus atributos, a soma de todos deve ser igual a 11!"
+        );
+      }
+    }
+    else if (nex < 19) {
+      if (soma == 12) {
+        atributos.style.display = "none";
+        classes.style.display = "flex";
+      } else if (soma < 12) {
+        alert(
+          "Você possui 7 pontos de atributo para distribuir antes de prosseguir, a soma de todos deve ser igual a 12!"
+        );
+      } else {
+        alert(
+          "Você distribuiu mais de 7 pontos entre seus atributos, a soma de todos deve ser igual a 12!"
+        );
+      }
+    }
+    else {
+      if (soma == 13) {
+        atributos.style.display = "none";
+        classes.style.display = "flex";
+      } else if (soma < 13) {
+        alert(
+          "Você possui 8 pontos de atributo para distribuir antes de prosseguir, a soma de todos deve ser igual a 13!"
+        );
+      } else {
+        alert(
+          "Você distribuiu mais de 8 pontos entre seus atributos, a soma de todos deve ser igual a 13!"
+        );
+      }
     }
   } else if (num == 4) {
     classes.style.display = "none";
@@ -98,36 +161,36 @@ function mudarDescricao(atributo) {
 
 function validarCampo(atributo) {
   if (atributo == 1) {
-    if (ipt_forca.value > 3) {
-      ipt_forca.value = 3;
+    if (ipt_forca.value > 5) {
+      ipt_forca.value = 5;
     } else if (ipt_forca.value < 0) {
       ipt_forca.value = 0;
     }
   }
   if (atributo == 2) {
-    if (ipt_agilidade.value > 3) {
-      ipt_agilidade.value = 3;
+    if (ipt_agilidade.value > 5) {
+      ipt_agilidade.value = 5;
     } else if (ipt_agilidade.value < 0) {
       ipt_agilidade.value = 0;
     }
   }
   if (atributo == 3) {
-    if (ipt_vigor.value > 3) {
-      ipt_vigor.value = 3;
+    if (ipt_vigor.value > 5) {
+      ipt_vigor.value = 5;
     } else if (ipt_vigor.value < 0) {
       ipt_vigor.value = 0;
     }
   }
   if (atributo == 4) {
-    if (ipt_presenca.value > 3) {
-      ipt_presenca.value = 3;
+    if (ipt_presenca.value > 5) {
+      ipt_presenca.value = 5;
     } else if (ipt_presenca.value < 0) {
       ipt_presenca.value = 0;
     }
   }
   if (atributo == 5) {
-    if (ipt_intelecto.value > 3) {
-      ipt_intelecto.value = 3;
+    if (ipt_intelecto.value > 5) {
+      ipt_intelecto.value = 5;
     } else if (ipt_intelecto.value < 0) {
       ipt_intelecto.value = 0;
     }
@@ -140,45 +203,100 @@ function selecionarClasse(id) {
   ocultista.classList.remove("selecionado");
 
   if (id == 1) {
-    classe = "Combatente";
+    classe = 1;
     combatente.classList.add("selecionado");
   } else if (id == 2) {
-    classe = "Especialista";
+    classe = 2;
     especialista.classList.add("selecionado");
   } else if (id == 3) {
-    classe = "Ocultista";
+    classe = 3;
     ocultista.classList.add("selecionado");
   }
 }
 
 function criarFicha() {
-  var nomePersonagemVar = nomePersonagem;
-  var nomeJogadorVar = nomeJogador;
-  var nexVar = nex;
+  var fkUsuarioVar = sessionStorage.ID_USUARIO;
   var forcaVar = forca;
   var agilidadeVar = agilidade;
   var vigorVar = vigor;
-  var presencaVar = presenca;
   var intelectoVar = intelecto;
-  var classeVar = classe;
+  var presencaVar = presenca;
+  var nexVar = nex;
+  var vidaVar = 0;
+  var sanidadeVar = 0;
+  var esforcoVar = 0;
+  var nomePersonagemVar = nomePersonagem;
+  var nomeJogadorVar = nomeJogador;
+  var historiaVar;
+  var aparenciaVar;
+  var personalidadeVar;
+  var fkClasseVar = classe;
 
-  if (classeVar == "") {
+  if (fkClasseVar == 0) {
     alert("Selecione uma das 3 classes antes de prosseguir!");
-    return
+    return;
+  }
+
+  if (fkClasseVar == 1) {
+    vidaVar = 20 + vigorVar + ((nex - 1) * (4 + vigorVar));
+    sanidadeVar = 12 + ((nex - 1) * 3);
+    esforcoVar = 2 + presencaVar + ((nex - 1) * (2 + presencaVar));
+  }
+  else if (fkClasseVar == 2) {
+    vidaVar = 16 + vigorVar + ((nex - 1) * (3 + vigorVar));
+    sanidadeVar = 16 + ((nex - 1) * 4);
+    esforcoVar = 3 + presencaVar + ((nex - 1) * (3 + presencaVar));
+  }
+  else if (fkClasseVar == 3) {
+    vidaVar = 12 + vigorVar + ((nex - 1) * (2 + vigorVar));
+    sanidadeVar = 20 + ((nex - 1) * 5);
+    esforcoVar = 4 + presencaVar + ((nex - 1) * (4 + presencaVar));
+  }
+
+  if (ipt_historia.value != "") {
+    historiaVar = ipt_historia.value;
+  }
+  else {
+    historiaVar = null;
+  }
+  if (ipt_aparencia.value != "") {
+    aparenciaVar = ipt_aparencia.value;
+  }
+  else {
+    aparenciaVar = null;
+  }
+  if (ipt_personalidade.value != "") {
+    personalidadeVar = ipt_personalidade.value;
+  }
+  else {
+    personalidadeVar = null;
   }
 
   // Enviando o valor da nova input
-  fetch("/usuarios/cadastrar", {
+  fetch("/criadorDeFicha/criarFicha", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       // crie um atributo que recebe o valor recuperado aqui
-      // Agora vá para o arquivo routes/usuario.js
-      nomeServer: nomeVar,
-      emailServer: emailVar,
-      senhaServer: senhaVar,
+      // Agora vá para o arquivo routes/criadorDeFicha.js
+      fkUsuarioServer: fkUsuarioVar,
+      forcaServer: forcaVar,
+      agilidadeServer: agilidadeVar,
+      vigorServer: vigorVar,
+      intelectoServer: intelectoVar,
+      presencaServer: presencaVar,
+      nexServer: nexVar,
+      vidaServer: vidaVar,
+      sanidadeServer: sanidadeVar,
+      esforcoServer: esforcoVar,
+      nomePersonagemServer: nomePersonagemVar,
+      nomeJogadorServer: nomeJogadorVar,
+      historiaServer: historiaVar,
+      aparenciaServer: aparenciaVar,
+      personalidadeServer: personalidadeVar,
+      fkClasseServer: fkClasseVar,
     }),
   })
     .then(function (resposta) {
@@ -186,12 +304,12 @@ function criarFicha() {
 
       if (resposta.ok) {
         alert(
-          "Cadastro realizado com sucesso! Redirecionando para tela de Login..."
+          "Ficha criada com sucesso! Redirecionando para sua biblioteca..."
         );
 
-        window.location = "login.html";
+        window.location = "biblioteca.html";
       } else {
-        throw "Houve um erro ao tentar realizar o cadastro!";
+        throw "Houve um erro ao tentar criar a ficha!";
       }
     })
     .catch(function (resposta) {
