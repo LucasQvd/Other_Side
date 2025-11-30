@@ -1,4 +1,4 @@
-var criadorDeFichaModel = require("../models/criadorDeFichaModel");
+var fichaModel = require("../models/fichaModel");
 
 function criarFicha(req, res) {
 
@@ -56,7 +56,7 @@ function criarFicha(req, res) {
   }
   else {
     // Passe os valores como parâmetro e vá para o arquivo criadorDeFichaModel.js
-    criadorDeFichaModel
+    fichaModel
       .criarFicha(fkUsuario, forca, agilidade, vigor, intelecto, presenca, nex, vida, sanidade, esforco, nomePersonagem, nomeJogador, historia, aparencia, personalidade, fkClasse)
       .then(function (resultado) {
         res.json(resultado);

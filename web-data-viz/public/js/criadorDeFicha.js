@@ -273,7 +273,7 @@ function criarFicha() {
   }
 
   // Enviando o valor da nova input
-  fetch("/criadorDeFicha/criarFicha", {
+  fetch("/ficha/criarFicha", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
