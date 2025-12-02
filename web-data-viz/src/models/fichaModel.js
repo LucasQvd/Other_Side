@@ -10,7 +10,7 @@ function criarFicha(fkUsuario, forca, agilidade, vigor, intelecto, presenca, nex
 
 function exibirFichas(idUsuario) {
     var instrucaoSql = `
-        SELECT idFicha, nomePersonagem, nome, vida, sanidade, esforco FROM ficha JOIN classe ON fkClasse = idClasse WHERE fkUsuario = ${idUsuario} ORDER BY idFicha;
+        SELECT idFicha, nomePersonagem, nome, vida, sanidade, esforco FROM ficha JOIN classe ON fkClasse = idClasse WHERE fkUsuario = ${idUsuario} ORDER BY idFicha DESC;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

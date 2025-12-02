@@ -57,14 +57,18 @@
 }
 
 .formulario input {
-  border: 2px solid var(--vermelho_sangue);
-  background-color: rgba(245, 245, 245, 0.9);
+  border: none;
+  outline: none;
+  border: 1px solid #444;
+  background-color: #111;
+  color: white;
   text-align: start;
   border-radius: 5px;
   margin: 0;
   height: 35px;
   width: 300px;
   padding: 2px;
+  padding-left: 10px;
 }
 
 .formulario input:focus {

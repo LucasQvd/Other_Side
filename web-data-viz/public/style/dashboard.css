@@ -30,7 +30,6 @@
 .card_kpi {
     background-color: #222;
     border: var(--violeta) 2px solid;
-    box-shadow: 0 0 3px var(--violeta);
     border-radius: 10px;
     padding: 13px;
     width: 32.5%;
@@ -38,6 +37,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#div_vida {
+    border: var(--vida) 2px solid;
+    box-shadow: 0 0 3px var(--vida);
+}
+
+#div_sanidade {
+    border: var(--sanidade) 2px solid;
+    box-shadow: 0 0 3px var(--sanidade);
+}
+
+#div_esforco {
+    border: var(--esforco) 2px solid;
+    box-shadow: 0 0 3px var(--esforco);
 }
 
 .card_kpi h4 {
