@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="../assets/medo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/ficha.css">
+</head>
+
+<body class="layout">
+
+    <header class="navbar_vertical">
+
+        <div class="logo_vertical">
+
+            <img src="../assets/other_side.png" />
+
+        </div>
+
+        <div class="divisoria"></div>
+
+        <nav class="nav_secoes">
+
+            <a class="ativado" href="./biblioteca.html">
+                <i class="fa-solid fa-book"></i>
+                Fichas
+            </a>
+
+            <a href="./dashboard.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </a>
+
+        </nav>
+
+        <a class="nav_sair" onclick="limparSessao()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Sair
+        </a>
+
+    </header>
+
+    <main class="conteudo">
+
+        <section class="ficha">
+
+            <div class="card_ficha">
+
+                <h2>William Doc</h2>
+
+                <div class="card_info">
+
+                    <p><b>Jogador:</b> Cainã</p>
+                    <p><b>Classe:</b> Ocultista</p>
+
+                </div>
+
+                <div class="card_atributos">
+
+                    <div class="pentagrama">
+
+                        <img src="../assets/atributos.png" />
+
+                        <div id="div_forca">1</div>
+                        <div id="div_agilidade">1</div>
+                        <div id="div_vigor">1</div>
+                        <div id="div_presenca">1</div>
+                        <div id="div_intelecto">1</div>
+
+                    </div>
+
+                </div>
+
+                <div class="card_pontos">
+
+                    <span><b>Vida:</b></span>
+                    <div class="barra" id="div_vida">16/16</div>
+
+                    <span><b>Sanidade:</b></span>
+                    <div class="barra" id="div_sanidade">20/20</div>
+
+                    <span><b>Esforço:</b></span>
+                    <div class="barra" id="div_esforco">3/3</div>
+
+                </div>
+
+            </div>
+
+            <div class="card_ficha">
+                <h2>Habilidades</h2>
+
+                <div class="conteudo_card">
+                    <!-- Exemplo -->
+                    <div class="habilidade">
+                        <h3>Golpe Sombrio</h3>
+                        <p>Dano extra quando em ambientes escuros.</p>
+                    </div>
+
+                    <div class="habilidade">
+                        <h3>Manto Etéreo</h3>
+                        <p>Fica invisível por 5 segundos ao receber dano crítico.</p>
+                    </div>
+
+                    <div class="habilidade">
+                        <h3>Visão do Abismo</h3>
+                        <p>Detecta entidades paranormais a até 15 metros.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+<script src="../js/sessao.js"></script>
+<script src="../js/biblioteca.js"></script>
+
+</html>

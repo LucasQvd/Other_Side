@@ -36,6 +36,9 @@
   --agilidade: #00bfa5;
   --intelecto: #0e5ee9;
   --presenca: #d4af37; 
+  --vida: #b21827;
+  --sanidade: #457b9d;
+  --esforco: #b7950b;
 }
 
 /* Reset geral */
@@ -55,7 +58,9 @@ body {
 /* Títulos principais (h1, h2, h3) */
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   font-family: "Cinzel Decorative", serif; /* Fonte do Texto */
   color: var(--dourado_antigo); /* Texto Dourado */
   text-shadow: 1px 1px 2px #000; /* Sombra para destaque */

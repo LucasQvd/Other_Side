@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../style/biblioteca.css">
 </head>
 
-<body class="layout">
+<body class="layout" onload="exibirFichas()">
 
     <header class="navbar_vertical">
 
@@ -29,11 +29,6 @@
                 Fichas
             </a>
 
-            <a href="./quiz.html">
-                <i class="fa-solid fa-question"></i>
-                Quiz
-            </a>
-
             <a href="./dashboard.html">
                 <i class="fa-solid fa-chart-line"></i>
                 Dashboard
@@ -48,26 +43,27 @@
     </header>
 
     <main class="conteudo">
-        
+
         <section class="cabecalho">
 
             <button class="btn_criar" onclick="window.location.href='criadorDeFicha.html'">Criar Ficha</button>
 
         </section>
 
-        <br><hr><br>
+        <br>
+        <hr><br>
 
         <section class="biblioteca">
 
-            <div id="div_biblioteca"></div>
+            <div id="div_biblioteca" class="cards_container"></div>
 
         </section>
-
 
     </main>
 
 </body>
 
-    <script src="../js/sessao.js"></script>
+<script src="../js/sessao.js"></script>
+<script src="../js/biblioteca.js"></script>
 
 </html>

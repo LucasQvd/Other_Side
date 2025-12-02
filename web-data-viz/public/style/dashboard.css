@@ -1,0 +1,103 @@
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.graficos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.barras {
+    display: flex;
+    background-color: #222;
+    border: var(--violeta) 2px solid;
+    box-shadow: 0 0 3px var(--violeta);
+    border-radius: 6px;
+    padding: 10px;
+    width: 620px;
+}
+
+.kpis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card_kpi {
+    background-color: #222;
+    border: var(--violeta) 2px solid;
+    box-shadow: 0 0 3px var(--violeta);
+    border-radius: 10px;
+    padding: 13px;
+    width: 32.5%;
+    height: 335px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_kpi h4 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card_kpi hr {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.ranking {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ranking li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: decimal;
+    color: white;
+}
+
+.ranking li span {
+    flex: 1;
+}
+
+#kpi_vida_nome,
+#kpi_sanidade_nome,
+#kpi_esforco_nome {
+    font-size: 30px;
+}
+
+.card_kpi div {
+    font-size: 20px;
+}
+
+.barra {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 30px;
+
+}
+
+#kpi_vida_pontos {
+    border: var(--vida) 2px solid;
+    box-shadow: 0 0 3px var(--vida);
+}
+
+#kpi_sanidade_pontos {
+    border: var(--sanidade) 2px solid;
+    box-shadow: 0 0 3px var(--sanidade);
+}
+
+#kpi_esforco_pontos {
+    border: var(--esforco) 2px solid;
+    box-shadow: 0 0 3px var(--esforco);
+}

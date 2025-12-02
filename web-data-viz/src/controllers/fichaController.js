@@ -1,7 +1,6 @@
 var fichaModel = require("../models/fichaModel");
 
 function criarFicha(req, res) {
-
   // Crie uma variável que vá recuperar os valores do arquivo criadorDeFicha.html
   var fkUsuario = req.body.fkUsuarioServer;
   var forca = req.body.forcaServer;
@@ -53,18 +52,34 @@ function criarFicha(req, res) {
     res.status(400).send("Sua personalidade está undefined!");
   } else if (fkClasse == undefined) {
     res.status(400).send("A fk da sua classe está undefined!");
-  }
-  else {
+  } else {
     // Passe os valores como parâmetro e vá para o arquivo criadorDeFichaModel.js
     fichaModel
-      .criarFicha(fkUsuario, forca, agilidade, vigor, intelecto, presenca, nex, vida, sanidade, esforco, nomePersonagem, nomeJogador, historia, aparencia, personalidade, fkClasse)
+      .criarFicha(
+        fkUsuario,
+        forca,
+        agilidade,
+        vigor,
+        intelecto,
+        presenca,
+        nex,
+        vida,
+        sanidade,
+        esforco,
+        nomePersonagem,
+        nomeJogador,
+        historia,
+        aparencia,
+        personalidade,
+        fkClasse
+      )
       .then(function (resultado) {
         res.json(resultado);
       })
       .catch(function (erro) {
         console.log(erro);
         console.log(
-          "\Houve um erro ao realizar a criação da ficha! Erro: ",
+          "Houve um erro ao realizar a criação da ficha! Erro: ",
           erro.sqlMessage
         );
         res.status(500).json(erro.sqlMessage);
@@ -72,6 +87,25 @@ function criarFicha(req, res) {
   }
 }
 
+function exibirFichas(req, res) {
+  console.log("REQ QUERY:", req.query);
+
+  const idUsuario = req.query.idUsuario;
+  console.log("ID RECEBIDO NO CONTROLLER:", idUsuario);
+
+  fichaModel
+    .exibirFichas(idUsuario)
+    .then((resultado) => {
+      res.status(200).json(resultado);
+      console.log("DADOS DO MODEL RECEBIDOS NO CONTROLLER:", resultado);
+    })
+    .catch((erro) => {
+      console.error(erro);
+      res.status(500).json({ error: erro.message });
+    });
+}
+
 module.exports = {
   criarFicha,
+  exibirFichas,
 };

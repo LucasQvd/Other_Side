@@ -8,4 +8,8 @@ router.post("/criarFicha", function (req, res) {
     fichaController.criarFicha(req, res);
 })
 
+router.get("/exibirFichas", function (req, res) {
+    fichaController.exibirFichas(req, res);
+})
+
 module.exports = router;

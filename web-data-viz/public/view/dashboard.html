@@ -8,9 +8,11 @@
     <link rel="shortcut icon" href="../assets/medo.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/global.css">
     <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="layout">
+<body class="layout" onload="dadosDashboardEspecifica(); dadosDashboardGeral(); rankingVida(); rankingSanidade(); rankingEsforco()">
 
     <header class="navbar_vertical">
 
@@ -28,11 +30,6 @@
                 Fichas
             </a>
 
-            <a href="./quiz.html">
-                <i class="fa-solid fa-question"></i>
-                Quiz
-            </a>
-
             <a class="ativado" href="./dashboard.html">
                 <i class="fa-solid fa-chart-line"></i>
                 Dashboard
@@ -47,8 +44,61 @@
     </header>
 
     <main class="conteudo">
-        Dashboard
+
+        <section class="kpis">
+
+            <div class="card_kpi">
+
+                <h4 style="color: var(--vida);">Personagens com Mais Vida</h4>
+                <hr>
+                <div>
+                    <ol id="ol_ranking_vida" class="ranking"></ol>
+                </div>
+
+            </div>
+
+            <div class="card_kpi">
+
+                <h4 style="color: rgb(164, 196, 255);">Personagens com Mais Sanidade</h4>
+                <hr>
+                <div>
+                    <ol id="ol_ranking_sanidade" class="ranking"> </ol>
+                </div>
+
+            </div>
+
+            <div class="card_kpi">
+
+                <h4 style="color: var(--esforco);">Personagens com Mais Esforço</h4>
+                <hr>
+                <div>
+                    <ol id="ol_ranking_esforco" class="ranking"></ol>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="graficos">
+
+            <div class="barras">
+
+                <canvas id="cvs_grafico_especifico"></canvas>
+
+            </div>
+
+            <div class="barras">
+
+                <canvas id="cvs_grafico_geral"></canvas>
+
+            </div>
+
+        </section>
+
     </main>
+
+    <script src="../js/dashboard.js"></script>
 
 </body>
 

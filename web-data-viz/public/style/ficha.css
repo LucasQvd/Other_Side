@@ -1,0 +1,138 @@
+.ficha {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  padding: 0px;
+  overflow: hidden; /* NÃO deixa a tela scrollar */
+}
+
+/* Estilos dos cards */
+.card_ficha {
+  flex: 1;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto; /* impede que o card ultrapasse os limites */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
+}
+
+/* Títulos dentro do card */
+.card_ficha h2 {
+  text-align: center;
+}
+
+.card_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card_info p {
+  border: 2px solid white;
+  border-radius: 10px;
+  text-decoration: underline;
+  text-align: center;
+  padding: 5px;
+  width: 200px;
+}
+
+.card_atributos {
+  display: flex;
+  justify-content: center;
+}
+
+.pentagrama {
+  position: relative;
+  width: 340px;
+  height: 340px;
+}
+
+.pentagrama img {
+  width: 100%;
+  height: 100%;
+}
+
+.pentagrama div {
+  position: absolute;
+  width: 45px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-align: center;
+  font-size: 30px;
+  background: none;
+  color: white;
+}
+
+#div_forca {
+  top: 110px;
+  left: 43px;
+}
+
+#div_agilidade {
+  top: 35px;
+  right: 147px;
+}
+
+#div_vigor {
+  bottom: 58px;
+  left: 216px;
+}
+
+#div_presenca {
+  bottom: 58px;
+  left: 76px;
+}
+
+#div_intelecto {
+  left: 255px;
+  top: 110px;
+}
+
+.card_pontos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.card_pontos .barra {
+  border: 2px solid white;
+  text-align: center;
+  padding: 5px;
+  width: 400px;
+}
+
+#div_vida {
+    background-color: var(--vida);
+}
+
+#div_sanidade {
+    background-color: var(--sanidade);
+}
+
+#div_esforco {
+    background-color: var(--esforco);
+}
+
+/* Habilidades */
+.habilidade {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.habilidade h3 {
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.habilidade p {
+  font-size: 1.1rem;
+  color: var(--cinza_espectral);
+}
