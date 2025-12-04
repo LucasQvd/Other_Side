@@ -86,45 +86,22 @@
 
             <div class="carrossel">
 
-                <a href="#" class="card_temporada"><img src="../assets/iniciacao.webp"></a>
-                <a href="#" class="card_temporada">Card 2</a>
-                <a href="#" class="card_temporada">Card 3</a>
-                <a href="#" class="card_temporada">Card 4</a>
-                <a href="#" class="card_temporada">Card 5</a>
-                <a href="#" class="card_temporada">Card 6</a>
-                <a href="#" class="card_temporada">Card 7</a>
+                <a onclick="textoTemporada(1)" class="card_temporada"><img src="../assets/iniciacao.webp"></a>
+                <a onclick="textoTemporada(2)" class="card_temporada"><img src="../assets/segredo_na_floresta.webp"></a>
+                <a onclick="textoTemporada(3)" class="card_temporada"><img src="../assets/desconjuracao.webp"></a>
+                <a onclick="textoTemporada(4)" class="card_temporada"><img src="../assets/calamidade.webp"></a>
+                <a onclick="textoTemporada(5)" class="card_temporada"><img src="../assets/segredo_na_ilha.png"></a>
+                <a onclick="textoTemporada(6)" class="card_temporada"><img src="../assets/sinais_do_outro_lado.png"></a>
+                <a onclick="textoTemporada(7)" class="card_temporada"><img src="../assets/quarentena.png"></a>
+                <a onclick="textoTemporada(8)" class="card_temporada"><img src="../assets/natal_macabro.png"></a>
+                <a onclick="textoTemporada(9)" class="card_temporada"><img src="../assets/hexatombe.png"></a>
 
             </div>
 
             <div class="card" style="margin-bottom: 40px;">
 
-                <p>
-                    O <span class="sangue">PARANORMAL</span> não vem para nossa <span class="sangue">REALIDADE</span> de
-                    maneira <span class="sangue">FÁCIL</span> ou, pelo menos, as coisas <span
-                        class="sangue">DEVERIAM</span> ser assim.
-                    <br><br>
-                    O mundo em que vivemos <span class="sangue">NÃO É O ÚNICO</span>. O universo que habitamos — <span
-                        class="sangue">A REALIDADE</span> — é protegido por uma <span class="sangue">BARREIRA
-                        INVISÍVEL</span> denominada <span class="sangue">MEMBRANA</span>. Além dela, existe um lugar de
-                    <span class="sangue">INSANIDADE E MEDO</span>. Habitada por <span class="sangue">FORÇAS
-                        MALIGNAS</span>, essa dimensão é conhecida apenas como <span class="sangue">OUTRO LADO</span>.
-                    <br><br>
-                    As entidades do <span class="sangue">OUTRO LADO</span> usam seus <span class="sangue">PODERES</span>
-                    para <span class="sangue">ATRAVESSAR A MEMBRANA</span> e aterrorizar as pessoas inocentes que vivem
-                    na <span class="sangue">REALIDADE</span> em <span class="sangue">COMPLETA IGNORÂNCIA</span>.
-                    <br><br>
-                    Pessoas como nós… Mas não como <span class="sangue">VOCÊ</span>.
-                    <br><br>
-                    <span class="sangue">VOCÊ</span> decidiu <span class="sangue">LUTAR</span> contra as <span
-                        class="sangue">ENTIDADES</span> que se manifestam e <span class="sangue">INVADEM</span> nosso
-                    mundo, custe o que custar. É uma tarefa <span class="sangue">ÁRDUA</span>, mas você <span
-                        class="sangue">NÃO ESTÁ SOZINHO</span>. Uma <span class="sangue">ORDEM</span>, criada para
-                    proteger a <span class="sangue">REALIDADE</span>, está do seu lado.
-                    <br><br>
-                    <span class="sangue">VOCÊ</span> é um <span class="sangue">AGENTE</span> dessa organização.
-                    <br><br>
-                    E essa é a <span class="sangue">SUA</span> história.
-                </p>
+                <h2 id="titulo_temporada"></h2>
+                <p id="texto_temporada"></p>
 
             </div>
 
@@ -141,3 +118,60 @@
 </body>
 
 </html>
+
+<script>
+    var temporadas = [
+        {
+            nome: "Iniciação",
+            texto: 
+                "",
+        },
+        {
+            nome: "O Segredo Na Floresta",
+            texto: 
+                "",
+        },
+        {
+            nome: "Desconjuração",
+            texto: 
+                "",
+        },
+        {
+            nome: "Calamidade",
+            texto: 
+                "",
+        },
+        {
+            nome: "O Segredo Na Ilha",
+            texto: 
+                "",
+        },
+        {
+            nome: "Sinais do Outro Lado",
+            texto: 
+                "",
+        },
+        {
+            nome: "Quarentena",
+            texto: 
+                "",
+        },
+        {
+            nome: "Natal Macabro",
+            texto: 
+                "",
+        },
+        {
+            nome: "Hexatombe",
+            texto: 
+                "Hexatombe é a terceira campanha spin-off da série Ordem Paranormal, protagonizada por Dalmo Magno, o Colosso; Jae-Yoon, o X; Jonas Aguiar, o Mutilador Noturno; Kemi, Labirinto e Henri. Algo grande está prestes a retornar. Cinco assassinos são usados como cobaias em um ritual feito pela Ordo Realitas para se infiltrarem no submundo ocultista com o objetivo de descobrir mais sobre um ritual chamado Hexatombe e suas consequências.",
+        },
+    ];
+
+    function textoTemporada(temp) {
+        if (temp == 9) {
+            titulo_temporada.innerHTML = temporadas[8].nome;
+            texto_temporada.innerHTML = temporadas[8].texto;
+        }
+    }
+</script>

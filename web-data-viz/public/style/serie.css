@@ -136,18 +136,12 @@ section::after {
 }
 
 .card_temporada img {
-  height: 100%; /* Preenche verticalmente */
-  width: auto; /* Mantém proporção */
+  height: 142px; /* Preenche verticalmente */
+  width: 400px; /* Mantém proporção */
   object-fit: cover; /* Cobre sem distorcer */
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
-
-.card_temporada:hover img {
-  transform: scale(0.9);
-}
-
 
 .card_temporada:hover {
-  transform: scale(1.05);
-  background: #333;
+  transform: scale(1.1);
 }

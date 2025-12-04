@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS otherSide;
 CREATE DATABASE otherSide;
 USE otherSide;
 

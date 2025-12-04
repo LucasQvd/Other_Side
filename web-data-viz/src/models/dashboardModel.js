@@ -2,7 +2,15 @@ var database = require("../database/config")
 
 function exibirEspecifica(idUsuario) {
     var instrucaoSql = `
-        SELECT fkClasse, COUNT(fkClasse) AS quantidade FROM ficha WHERE fkUsuario = ${idUsuario} GROUP BY fkClasse ORDER BY fkClasse;
+        SELECT
+            c.idClasse,
+            COUNT(f.idFicha) AS quantidade
+        FROM classe c
+        LEFT JOIN ficha f 
+            ON f.fkClasse = c.idClasse
+            AND f.fkUsuario = ${idUsuario}
+        GROUP BY c.idClasse, c.nome
+        ORDER BY c.idClasse;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -10,7 +18,14 @@ function exibirEspecifica(idUsuario) {
 
 function exibirGeral() {
     var instrucaoSql = `
-        SELECT fkClasse, COUNT(fkClasse) AS quantidade FROM ficha GROUP BY fkClasse ORDER BY fkClasse;
+        SELECT
+            c.idClasse,
+            COUNT(f.idFicha) AS quantidade
+        FROM classe c
+        LEFT JOIN ficha f 
+            ON f.fkClasse = c.idClasse
+        GROUP BY c.idClasse, c.nome
+        ORDER BY c.idClasse;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
