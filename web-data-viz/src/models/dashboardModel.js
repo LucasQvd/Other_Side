@@ -9,7 +9,7 @@ function exibirEspecifica(idUsuario) {
         LEFT JOIN ficha f 
             ON f.fkClasse = c.idClasse
             AND f.fkUsuario = ${idUsuario}
-        GROUP BY c.idClasse, c.nome
+        GROUP BY c.idClasse
         ORDER BY c.idClasse;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
@@ -24,7 +24,7 @@ function exibirGeral() {
         FROM classe c
         LEFT JOIN ficha f 
             ON f.fkClasse = c.idClasse
-        GROUP BY c.idClasse, c.nome
+        GROUP BY c.idClasse
         ORDER BY c.idClasse;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);

@@ -24,7 +24,7 @@ html {
 
 /* Estilo geral de qualquer seção */
 section {
-  height: 900px; /* Altura da seção */
+  height: 700px; /* Altura da seção */
   position: relative; /* Necessário para permitir o uso das camadas de sombra */
   background-size: cover; /* Faz o fundo preencher toda a área sem distorcer */
   background-position: center; /* Centraliza o fundo em qualquer resolução */
