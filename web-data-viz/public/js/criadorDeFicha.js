@@ -24,6 +24,27 @@ function trocarCard(num) {
     } else {
       informacoes.style.display = "none";
       atributos.style.display = "flex";
+
+      if (nex < 4) {
+        descricaoAtributo.innerHTML =
+          "Você possui 4 pontos iniciais para distribuir dentre os 5 atributos do sistema.<br><br>Clique em um dos atributos do pentagrama para ver sua descrição.";
+      } 
+      else if (nex < 10) {
+        descricaoAtributo.innerHTML =
+          "Você possui 5 pontos iniciais para distribuir dentre os 5 atributos do sistema.<br><br>Clique em um dos atributos do pentagrama para ver sua descrição.";
+      } 
+      else if (nex < 16) {
+        descricaoAtributo.innerHTML =
+          "Você possui 6 pontos iniciais para distribuir dentre os 5 atributos do sistema.<br><br>Clique em um dos atributos do pentagrama para ver sua descrição.";
+      } 
+      else if (nex < 19) {
+        descricaoAtributo.innerHTML =
+          "Você possui 7 pontos iniciais para distribuir dentre os 5 atributos do sistema.<br><br>Clique em um dos atributos do pentagrama para ver sua descrição.";
+      }
+      else {
+        descricaoAtributo.innerHTML =
+          "Você possui 8 pontos iniciais para distribuir dentre os 5 atributos do sistema.<br><br>Clique em um dos atributos do pentagrama para ver sua descrição.";
+      }
     }
   } else if (num == 2) {
     atributos.style.display = "none";
@@ -49,8 +70,7 @@ function trocarCard(num) {
           "Você distribuiu mais de 4 pontos entre seus atributos, a soma de todos deve ser igual a 9!"
         );
       }
-    }
-    else if (nex < 10) {
+    } else if (nex < 10) {
       if (soma == 10) {
         atributos.style.display = "none";
         classes.style.display = "flex";
@@ -63,8 +83,7 @@ function trocarCard(num) {
           "Você distribuiu mais de 5 pontos entre seus atributos, a soma de todos deve ser igual a 10!"
         );
       }
-    }
-    else if (nex < 16) {
+    } else if (nex < 16) {
       if (soma == 11) {
         atributos.style.display = "none";
         classes.style.display = "flex";
@@ -77,8 +96,7 @@ function trocarCard(num) {
           "Você distribuiu mais de 6 pontos entre seus atributos, a soma de todos deve ser igual a 11!"
         );
       }
-    }
-    else if (nex < 19) {
+    } else if (nex < 19) {
       if (soma == 12) {
         atributos.style.display = "none";
         classes.style.display = "flex";
@@ -91,8 +109,7 @@ function trocarCard(num) {
           "Você distribuiu mais de 7 pontos entre seus atributos, a soma de todos deve ser igual a 12!"
         );
       }
-    }
-    else {
+    } else {
       if (soma == 13) {
         atributos.style.display = "none";
         classes.style.display = "flex";
@@ -238,37 +255,32 @@ function criarFicha() {
   }
 
   if (fkClasseVar == 1) {
-    vidaVar = 20 + vigorVar + ((nex - 1) * (4 + vigorVar));
-    sanidadeVar = 12 + ((nex - 1) * 3);
-    esforcoVar = 2 + presencaVar + ((nex - 1) * (2 + presencaVar));
-  }
-  else if (fkClasseVar == 2) {
-    vidaVar = 16 + vigorVar + ((nex - 1) * (3 + vigorVar));
-    sanidadeVar = 16 + ((nex - 1) * 4);
-    esforcoVar = 3 + presencaVar + ((nex - 1) * (3 + presencaVar));
-  }
-  else if (fkClasseVar == 3) {
-    vidaVar = 12 + vigorVar + ((nex - 1) * (2 + vigorVar));
-    sanidadeVar = 20 + ((nex - 1) * 5);
-    esforcoVar = 4 + presencaVar + ((nex - 1) * (4 + presencaVar));
+    vidaVar = 20 + vigorVar + (nex - 1) * (4 + vigorVar);
+    sanidadeVar = 12 + (nex - 1) * 3;
+    esforcoVar = 2 + presencaVar + (nex - 1) * (2 + presencaVar);
+  } else if (fkClasseVar == 2) {
+    vidaVar = 16 + vigorVar + (nex - 1) * (3 + vigorVar);
+    sanidadeVar = 16 + (nex - 1) * 4;
+    esforcoVar = 3 + presencaVar + (nex - 1) * (3 + presencaVar);
+  } else if (fkClasseVar == 3) {
+    vidaVar = 12 + vigorVar + (nex - 1) * (2 + vigorVar);
+    sanidadeVar = 20 + (nex - 1) * 5;
+    esforcoVar = 4 + presencaVar + (nex - 1) * (4 + presencaVar);
   }
 
   if (ipt_historia.value != "") {
     historiaVar = ipt_historia.value;
-  }
-  else {
+  } else {
     historiaVar = null;
   }
   if (ipt_aparencia.value != "") {
     aparenciaVar = ipt_aparencia.value;
-  }
-  else {
+  } else {
     aparenciaVar = null;
   }
   if (ipt_personalidade.value != "") {
     personalidadeVar = ipt_personalidade.value;
-  }
-  else {
+  } else {
     personalidadeVar = null;
   }
 
