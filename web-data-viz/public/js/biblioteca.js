@@ -13,10 +13,10 @@ function exibirFichas() {
         var esforco = resultado.esforco;
 
         mensagem = `
-                <div class="card_item" onclick="abrirFicha(${idFicha})">
+                <div class="card_ficha" onclick="abrirFicha(${idFicha})">
 
                     <h3>${nomePersonagem}</h3>
-                    <ul class="topicos">
+                    <ul class="status">
                         <li><b>Classe:</b> ${classe}</li>
                         <li><b style='color: var(--vida);'>Vida:</b> ${vida}</li>
                         <li><b style='color: var(--sanidade);'>Sanidade:</b> ${sanidade}</li>

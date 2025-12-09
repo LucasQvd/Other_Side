@@ -11,7 +11,7 @@ CREATE TABLE usuario (
 
 CREATE TABLE classe (
 	idClasse INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(12) NOT NULL,
+	nome VARCHAR(12) NOT NULL UNIQUE,
 	CONSTRAINT chkNome
 		CHECK (nome IN ('Combatente', 'Especialista', 'Ocultista')),
 	descricao VARCHAR(500) NOT NULL

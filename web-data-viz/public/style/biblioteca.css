@@ -1,82 +1,67 @@
+/* FORMATAÇÃO DA BIBLIOTECA */
+
 .cabecalho {
-  display: flex;
-  justify-content: flex-end;
+  display: flex; /* Define o container como flexbox */
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
 }
 
 .btn_criar {
-  background: linear-gradient(90deg, var(--roxo_escuro), var(--roxo_claro));
-  color: whitesmoke;
-  width: 10%;
-  height: 40px;
+  background: linear-gradient(90deg, var(--roxo_escuro), var(--roxo_claro)); /* Fundo roxo com degradê */
+  color: whitesmoke; /* Cor do texto: branco */
+  width: 10%; /* Largura do botão */
+  height: 40px; /* Altura do botão */
 }
 
 .biblioteca {
-  flex: 1;
-  display: flex;
+  flex: 1; /* Faz o container ocupar o espaço restante disponível */
+  display: flex; /* Define o container como flexbox */
 }
 
-/* ======== CARDS DA BIBLIOTECA FIXOS ======== */
+/* CARDS DA BIBLIOTECA */
 
 .cards_container {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  /* cada card ocupa uma linha de altura fixa */
-  grid-auto-rows: 220px;
-
-  gap: 20px;
-  padding: 10px 20px;
-
-  overflow-y: auto; /* único scroll */
-  scrollbar-width: thin;
+  flex: 1; /* Faz o container ocupar o espaço restante disponível */
+  display: grid; /* Define o container como grid */
+  grid-template-columns: repeat(3, 1fr); /* Divide em 3 colunas iguais */
+  grid-auto-rows: 220px; /* Altura das linhas */
+  gap: 20px; /* Espaçamento entre os cards */
+  padding: 10px 20px; /* Espaçamento interno */
+  overflow-y: auto; /* Habilita barra de scroll no eixo vertical automaticamente */
 }
 
-
-.cards_container::-webkit-scrollbar {
-  width: 8px;
+.card_ficha {
+  height: 200px; /* Altura dos cards */
+  background: linear-gradient(160deg, #1a1a1a, #2a2a2a); /* Fundo preto com degradê */
+  border: 1px solid var(--roxo_claro); /* Borda roxa */
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor de clique ao passar o mouse */
+  transition: 0.2s; /* Animação para o hover */
+  box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Sombra ao redor */
+  overflow: hidden; /* Oculta conteúdo que ultrapassar o card */
 }
 
-.cards_container::-webkit-scrollbar-thumb {
-  background: var(--roxo_claro);
-  border-radius: 10px;
+.card_ficha:hover {
+  transform: scale(1.05); /* Cresce o card ao passar o mouse */
+  box-shadow: 0 0 15px var(--roxo_claro); /* Sombra ao redor */
 }
 
-.card_item {
-  height: 200px;
-  background: linear-gradient(160deg, #1a1a1a, #2a2a2a);
-  border: 1px solid var(--roxo_claro);
-  border-radius: 12px;
-  padding: 20px;
-  cursor: pointer;
-  transition: 0.2s;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  overflow: hidden;
+.card_ficha h3 {
+  margin-bottom: 10px; /* Espaçamento abaixo do título */
+  color: var(--roxo_claro); /* Cor do título: roxo */
 }
 
-
-.card_item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px var(--roxo_claro);
+.card_ficha p {
+  color: #ccc; /* Cor do texto: branco */
+  font-size: 1rem; /* Tamanho da Fonte */
 }
 
-.card_item h3 {
-  margin-bottom: 10px;
-  color: var(--roxo_claro);
+.status {
+  padding-left: 20px; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho da Fonte */
 }
 
-.card_item p {
-  color: #ccc;
-  font-size: 1rem;
-}
-
-.topicos {
-  list-style-type: disc; /* bolinha padrão */
-  padding-left: 20px;
-  font-size: 18px;
-}
-
-.topicos li {
-  margin-bottom: 6px;
-  color: white;
+.status li {
+  margin-bottom: 6px; /* Espaçamento abaixo dos tópicos */
+  color: white; /* Cor dos tópicos: branco */
 }
